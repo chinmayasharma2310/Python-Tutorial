@@ -1,0 +1,81 @@
+# Array Creation
+
+import array as arr
+
+# Syntax-> array('datatype',value list)
+
+integer_array = arr.array('i', [1,2,3,4])  # i for integer.
+print("Integer array:", end= " ")
+
+for ele in range(0,4):
+    print(integer_array[ele],end="  ")
+print()
+
+decimal_array = arr.array('d',[1.1,2.2,3.3,4.4]) # d for decimal
+print("Demical array : ", end= " ")
+
+for ele in range(0,4):
+    print(decimal_array[ele], end=" ")
+print()
+# Insertion in Array
+
+integer_array.insert(2,6)
+print( "Integer Array after insertion: ", end=" ")
+for ele in range(0,5):
+    print(integer_array[ele], end= " ")
+
+print()
+
+decimal_array.append(6.6)
+print("Decimal array after appending", end= " ")
+for ele in range(0,5):
+    print(decimal_array[ele], end= " ")
+
+print()
+
+# Accessing array
+
+print("Element in an integer array: ", integer_array[2])
+print("Element in Decimal array: ", decimal_array[3])
+
+# Removing an element in Array
+
+integer_array.pop()
+integer_array.pop(1) # 1 is the index
+
+print("Array after poping elements: ", end=" ")
+
+for i in range(0,3):
+    print(integer_array[i], end= " ")
+print()
+
+decimal_array. remove(2.2) #2.2 is the element
+
+print("Decimal array after removing element: ", end=" ")
+for i in range(0,3):
+    print(decimal_array[i], end= " ")
+print()
+
+# Searching in an Array
+
+integer_array.append(6)
+print("Elements in integer array: ", end=" ")
+for i in range(0,4):
+    print(integer_array[i], end= " ")
+print()
+print("Index of element 6 : ", integer_array.index(6)) # Returns the first occurence of the element. 
+
+# Updating an Element in an Array
+
+integer_array[2] = 7
+print("Elements in integer array after updation: ", end=" ")
+for i in range (0,4):
+     print(integer_array[i], end= " ")
+print()
+
+# Slicing in Array
+
+print("Integer Array after slicing:" ,integer_array[:])
+print("Integer Array after slicing:" ,integer_array[1:3])
+print("Integer Array after slicing:" ,integer_array[-1:])
+print("Integer Array after slicing:" ,integer_array[::-1])
