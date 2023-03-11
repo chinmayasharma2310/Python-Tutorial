@@ -1,0 +1,35 @@
+# Python class implementation with a small program
+
+class Dog :
+    # class variable
+    ownerName = "Joy"
+    ownerName1 = "Happy"
+
+    def __init__(self,name,age):   # parameterised constructor
+        # Instance variable 
+        self.name = name
+        self.age = age
+    
+
+    def printMethod(self): # self - reference to the object.
+        print("I,", dog1.ownerName,", is the owner.")
+        print("My pet's name is ", dog1.name)
+        print("He is ",dog1.age,"years old")
+
+        print("I,", dog1.ownerName1,", is the owner.")
+        print("My pet's name is ", dog2.name)
+        print("He is ",dog2.age,"years old")
+    
+    #instance variable using normal method
+    def setcolor(self, color):
+        self.color = color
+    
+    def getcolor(self):
+        print("The color of dogs is :", self.color)
+        
+dog1 = Dog("bubu", 6)       # instantiating the class
+dog2 = Dog("gogo", 5)
+dog1.printMethod()
+dog1.setcolor("brown")
+dog1.getcolor()
+
