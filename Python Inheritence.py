@@ -1,3 +1,4 @@
+
 class Animal :      # Base class/Parent class
 
     def __init__(self, breed, age):
@@ -25,3 +26,24 @@ print("Calling methods of both the classes")
 
 Dogo.print()
 Ani.Display()
+
+#Single Inheritence
+
+class Person():
+
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+
+    def Display(self):
+        print(self.name, self.id)
+
+class Employee(Person):
+    
+    def __init__(self, name, id , age):
+        self.age = age
+        #invoking constructor of parent class
+        Person.__init__(self, name, id)
+
+Emp = Employee("Joy", 101, 25)
+Emp.Display()
